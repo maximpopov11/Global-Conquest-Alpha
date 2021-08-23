@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <!--
+    Vertical scroll view for selected information view.
+    -->
+    <ScrollView
+        android:id="@+id/scrollSelectedInformation"
+        android:layout_width="160dp"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:layout_weight="1"
+        tools:ignore="MissingConstraints">
+
+        <!--
+        Table for information in selected information view.
+        -->
+        <TableLayout
+            android:id="@+id/selectedInformation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="67dp">
+
+            <!--
+            First table row for close selected information view button.
+            -->
+            <TableRow
+                android:id="@+id/selectedInformationRow1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black">
+
+                <!--
+                Layout for positioning close selected information view button.
+                -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_span="5">
+
+                    <!--
+                    Close selected information view button.
+                    -->
+                    <Button
+                        android:id="@+id/hideSelectedInformation"
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:text="CLOSE  TAB"
+                        app:layout_constraintEnd_toEndOf="@+id/selectedInformation"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="NotSibling" />
+
+                </RelativeLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <!--
+    Horizontal scroll view for map.
+    -->
+    <HorizontalScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <!--
+        Vertical scroll view for map.
+        -->
+        <ScrollView
+            android:id="@+id/vScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="134dp">
+
+            <!--
+            Layout for map.
+            -->
+            <LinearLayout
+                android:id="@+id/relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </ScrollView>
+    </HorizontalScrollView>
+
+<!--    &lt;!&ndash;-->
+<!--    Button for moving to province 1 in tests.-->
+<!--    &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/moveToProvince1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="P1"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    &lt;!&ndash;-->
+<!--    Button for moving to province 2 in tests.-->
+<!--    &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/moveToProvince2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="100dp"-->
+<!--        android:text="P2"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    &lt;!&ndash;-->
+<!--    Button for moving to province 3 in tests.-->
+<!--    &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/moveToProvince3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="200dp"-->
+<!--        android:text="P3"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    &lt;!&ndash;-->
+<!--    Button for moving to province 4 in tests.-->
+<!--    &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/moveToProvince4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="300dp"-->
+<!--        android:text="P4"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    &lt;!&ndash;-->
+<!--    Button for moving to province 5 in tests.-->
+<!--    &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/moveToProvince5"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="400dp"-->
+<!--        android:text="P5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--
+    Button for going to the next turn in tests.
+    -->
+    <Button
+        android:id="@+id/buttonNextTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="next phase"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--
+    Button for switching nations in tests.
+    -->
+
+    <!--
+    Layout for positioning buttons for ordering units.
+    -->
+
+    <Button
+        android:id="@+id/buttonSwitchNation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="160dp"
+        android:text="no nation selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_span="5"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!--
+        Button for showing all orders.
+        -->
+        <Button
+            android:id="@+id/buttonToggleOrderVisibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Show Orders"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!--
+        Button for deselecting the selected unit.
+        -->
+        <Button
+            android:id="@+id/buttonDeselect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Deselect"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!--
+        Button for clearing the orders of the selected unit.
+        -->
+        <Button
+            android:id="@+id/buttonClearOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear Orders"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
